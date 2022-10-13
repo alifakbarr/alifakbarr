@@ -5,7 +5,7 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on Universitas Muhammadiyah Sidoarjo
+- 🔭 I’m currently studying at Universitas Muhammadiyah Sidoarjo
 - 🌱 I’m currently learning Golang
 - 💬 Ask me about One Piece. I will answer and explain to the best of my knowledge.
 - 📫 How to reach me: Follow my instagram @alifakbar_8
