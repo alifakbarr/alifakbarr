@@ -16,11 +16,10 @@ body .content{
   background-color: #252529;
   border-radius: 15px;
 }
-.artikel{
-  
+
+.kartu a:hover{
+  background-color: #252529;
 }
-
-
 
 footer {
   background-color: #18181b;
