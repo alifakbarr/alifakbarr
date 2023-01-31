@@ -8,7 +8,7 @@
                 Title
             </th>
             <th scope="col" class="px-6 py-3">
-                Date
+                Created At
             </th>
             <th scope="col" class="px-6 py-3">
                 Action
@@ -22,10 +22,20 @@
                 <%= index+1 %> 
             </th>
             <td class="px-6 py-4">
-                <%= note.title %> 
+                <a href="/notes/detail/<%= note._id %> ">
+                    <%= note.title %>
+                </a> 
             </td>
             <td class="px-6 py-4">
-                <%= note.createdAt %> 
+                <% 
+                    time = note.createdAt
+                    jam = time.getHours()
+                    menit = time.getMinutes()
+                    hari = time.getDate()
+                    bulan = time.getMonth()+1
+                    tahun = time.getFullYear()
+                    %> 
+                <%= `${jam}:${menit} WIB - ${hari}/${bulan}/${tahun}`%> 
             </td>
             <td class="px-6 py-4">
                 <a href="/notes/edit/<%= note._id %> " class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
