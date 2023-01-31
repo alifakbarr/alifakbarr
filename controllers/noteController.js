@@ -24,8 +24,9 @@ module.exports = {
     addNote: async(req,res) => {
         try {
             const {title, content} = req.body
-
-            await Note.create({title,content})
+            created_at = Date.now()
+            updated_at = Date.now()
+            await Note.create({title,content,created_at,updated_at})
             res.redirect("/notes")
         }catch (error) {
             res.redirect("/notes")
