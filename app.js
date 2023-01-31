@@ -16,6 +16,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // add noteRouter
 const noteRouter = require('./routes/note');
+// add projectRouter
+const projectRouter = require("./routes/project");
 
 var app = express();
 
@@ -35,6 +37,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // use route note
 app.use("/notes", noteRouter);
+// use route project
+app.use("/project", projectRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

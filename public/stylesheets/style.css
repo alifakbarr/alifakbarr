@@ -21,6 +21,13 @@ body .content{
   background-color: #252529;
 }
 
+.project a:hover{
+  background-color: #252529;
+}
+.project a:hover .link{
+  color: #4ade80;
+}
+
 footer {
   background-color: #18181b;
 }

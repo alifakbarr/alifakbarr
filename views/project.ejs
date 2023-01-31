@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/stylesheets/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+</head>
+<title>Project</title>
+<body class="mx-16">
+  <div class="content border-x-2 border-zinc-800 px-14 py-7">
+    <%- include('layout/navbar') %>
+    <p class="lg:text-5xl sm:text-4xl font-bold pt-32">
+        <span class="text-green-400">Project</span> that I have made<span class="text-green-400">.</span>
+    </p>
+    <p class="pt-12 w-2/3 text-zinc-400">
+        I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.
+    </p>
+
+    <div class="project mt-14 grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-2">
+        <a href="https://github.com/alifakbarr/alifakbarr" target="_blank" class="hover:outline outline-offset-1 outline-green-500 rounded-lg ">
+            <div class="artikel p-3">
+              <p class="font-bold mb-2">Portofolio</p>
+              <p class="text-sm text-justify text-zinc-400 mb-3">Made my own portfolio web from NodeJs and ExpressJs</p>
+              <div class="flex items-center">
+                <img src="assets/images/link.png" alt="" class="w-5 mr-2">
+                <p class="text-sm font-bold text-white link">github.com</p>
+              </div>
+            </div>
+          </a>
+        <a href="https://github.com/alifakbarr/alifakbarr" target="_blank" class="hover:outline outline-offset-1 outline-green-500 rounded-lg ">
+            <div class="artikel p-3">
+              <p class="font-bold mb-2">Notes</p>
+              <p class="text-sm text-justify text-zinc-400 mb-3">make simple notes with Node Js, Express Js, and also Tailwind</p>
+              <div class="flex items-center">
+                <img src="assets/images/link.png" alt="" class="w-5 mr-2">
+                <p class="text-sm font-bold text-white link">github.com</p>
+              </div>
+            </div>
+          </a>
+    </div>
+        
+  </div>
+  <%- include('layout/footer') %> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+</html>
