@@ -11,6 +11,7 @@ router.get("/detail/:id", noteController.detailNote)
 router.get("/edit/:id",noteController.editNote)
 router.post("/update/:id", noteController.updateNote)
 router.get("/delete/:id", noteController.deleteNote)
+router.post("/search", noteController.searchNote)
 
 // export routernya
 module.exports = router

@@ -5,12 +5,17 @@ module.exports = {
     // View Note
     viewNote:async (req, res) => {
         try {
-            const notes = await Note.find()
-
-        res.render("./notes/index", {
-            notes
-        })
+            let keyword = {}
+            if (req.query.title){
+                keyword = {title:{$regex:req.query.title}}
+                console.log(keyword);
+            }
+            const notes = await Note.find(keyword).sort({updatedAt:-1})
+            res.render("./notes/index", {
+                notes
+            })
         } catch (error) {
+            console.log(error);
             res.redirect("/notes")
         }
     },
@@ -76,6 +81,23 @@ module.exports = {
             await Note.findByIdAndDelete(req.params.id)
             res.redirect("/notes")
         }catch(error){
+            res.redirect("/notes")
+        }
+    },
+    searchNote: async(req,res) => {
+        try{
+            let keyword = {}
+
+            if (req.query.keyword){
+                keyword = {title:{$regex:req.query.keyword}}
+            }
+            const notes = await Note.find(keyword,"")
+            console.log(notes);
+            res.redirect("/notes/search",{
+                notes
+            })
+        } catch (error) {
+            console.log(error);
             res.redirect("/notes")
         }
     }
